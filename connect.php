@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost"; // Use localhost as the server name
+$servername = "srv1111.hstgr.io"; // Use localhost as the server name
 $username = "u932499389_test1";
 $password = "12345Dp12345";
 $dbname = "u932499389_localhost";
