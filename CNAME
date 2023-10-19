@@ -1,1 +1,35 @@
-happy-bitthsia.com
+<?php
+// Check if the form was submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Database connection information
+    $servername = "localhost";
+    $username = "u932499389_test1";
+    $password = "12345Dp12345";
+    $dbname = "u932499389_localhost";
+    // Create a connection to the database
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Check the connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // Get form data
+    $name = $_POST['name'];
+    $mobileNumber = $_POST['mobile-number'];
+    $selectedGame = $_POST['game'];
+    $selectedPayment = $_POST['payment'];
+
+    // Insert data into the database
+    $sql = "INSERT INTO registration_data (name, mobile_number, selected_game, selected_payment) VALUES ('$name', '$mobileNumber', '$selectedGame', '$selectedPayment')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Data inserted successfully!";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    // Close the database connection
+    $conn->close();
+}
+?>

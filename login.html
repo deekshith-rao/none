@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+margin:0px;
+            margin: 0;
+            padding: 0;
+        }
+       
+        .heading {
+            background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+margin:0px;
+            color: #24baa6;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .heading h1 {
+            font-size: 24px;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+
+        label {
+            font-weight: bold;
+            
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        
+
+        h4 {
+            margin-top: 20px;
+            color: #900dd6;
+        }
+
+        .radio-group {
+            margin-top: 10px;
+        }
+
+        .radio-group input[type="radio"] {
+            margin-right: 5px;
+            display: none;
+        }
+
+        .radio-group input[type="radio"] + label {
+            display: inline-block;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .radio-group input[type="radio"]:checked + label {
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        button[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="heading">
+    <h1>Registration Form</h1>
+</div>
+    <form action="connect.php" method="POST">
+        <h4>Name</h4><br>
+        <input type="text" placeholder="Enter your name" name="name" id="name">
+        <div>
+            <h4>Transaction Mobile Number</h4><br>
+            <input type="text" placeholder="Enter Transaction number" name="mobile-number">
+        </div>
+        <div class="radio-group">
+            <h4>CHOOSE GAME <br><font color="orange">Click on any option</font></h4>
+            
+            <input type="radio" id="kalyan" name="game" value="K">
+            <label for="kalyan">Kalyan</label>
+            <input type="radio" id="milan" name="game" value="M">
+            <label for="milan">Milan day</label>
+            <input type="radio" id="sridevi" name="game" value="S">
+            <label for="sridevi">Sridevi</label>
+            <input type="radio" id="timeBazar" name="game" value="T">
+            <label for="timeBazar">Time Bazar</label>
+        </div>
+        <div class="radio-group">
+            <h4>Mode of Payment</h4>
+            <input type="radio" id="phonePe" name="payment"  value="P">
+            <label for="phonePe">PhonePe</label>
+            <input type="radio" id="paytm" name="payment" value="PA">
+            <label for="paytm">Paytm</label>
+            <input value="G" type="radio" id="googlePay" name="payment" >
+            <label for="googlePay">Google Pay</label>
+            <input  value="O" type="radio" id="others" name="payment">
+            <label for="others">Others</label>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
